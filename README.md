@@ -1,5 +1,15 @@
 # Real_Time_Event_Driven_Communication
-Demonstration of a real time event driven communication system for 2 applications: main app and admin app. Admin app can post products and main app which is for users can like the products.
+Demonstration of a real time event driven communication system for 2 applications: main app and admin app. Admin app can post products and main app which is for users can like the product.
+
+# Start Using Project
+django-admin startproject admin
+cd admin
+python3 manage.py runserver
+python -m venv .venv
+source .venv/bin/activate
+conda deactivate
+pip install -r requirements.txt
+
 
 # RabbitMQ functioning:
 ![image](https://github.com/user-attachments/assets/47a1ad1c-8209-4c91-b714-8c218dfc9e4a)
@@ -12,7 +22,3 @@ Demonstration of a real time event driven communication system for 2 application
 
 
 This is how 2 apps real-time event driven communication is established.
-
-
-
-
