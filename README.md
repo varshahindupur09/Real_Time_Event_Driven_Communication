@@ -9,6 +9,8 @@ python -m venv .venv
 source .venv/bin/activate
 conda deactivate
 pip install -r requirements.txt
+docker-compose up
+mysql -u adminuser -p -h 127.0.0.1 -P 33066
 
 
 # RabbitMQ functioning:
