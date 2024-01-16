@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+databases
+sqlalchemy
+pydantic
+requests
+mysqlclient
+gunicorn
+mysql-connector-python
+pymysql
+alembic
+cryptography
+pika

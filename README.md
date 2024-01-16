@@ -8,10 +8,47 @@ python3 manage.py runserver
 python -m venv .venv
 source .venv/bin/activate
 conda deactivate
+pip install --upgrade pi
 pip install -r requirements.txt
 docker-compose up
 mysql -u adminuser -p -h 127.0.0.1 -P 33066
 
+docker-compose exec backend sh
+
+
+# main app usage
+cd main
+python3.12 -m venv .venv
+source .venv/bin/activate
+conda deactivate
+pip install --upgrade pip
+pip install -r requirements.txt
+docker compose build backend
+docker compose down
+docker compose up
+docker compose up --build -d
+docker compose exec db /bin/bash
+echo $MYSQL_USER
+
+docker compose exec backend sh => python manager.py db init => python manager.py db migrate => python manager.py db upgrade
+
+docker-compose exec backend sh => export FLASK_APP=main.py => flask db init => flask db migrate -m "Initial migration" => flask db upgrade
+
+docker compose exec db mysql -u root -p
+use main;
+show tables;
+mysql> show tables;
++-----------------+
+| Tables_in_main  |
++-----------------+
+| alembic_version |
+| product         |
+| product_user    |
++-----------------+
+3 rows in set (0.00 sec)
+
+docker compose down -v
+docker compose build
 
 # RabbitMQ functioning:
 ![image](https://github.com/user-attachments/assets/47a1ad1c-8209-4c91-b714-8c218dfc9e4a)

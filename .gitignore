@@ -1,2 +1,5 @@
 admin/.venv
 admin/.dbdata
+
+main/.venv
+main/.dbdata
