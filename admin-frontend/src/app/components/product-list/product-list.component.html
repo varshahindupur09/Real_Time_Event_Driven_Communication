@@ -1,0 +1,7 @@
+<table>
+  <tr *ngFor="let product of products">
+    <td>{{ product.title }}</td>
+    <td>{{ product.likes }} Likes</td>
+    <td><button (click)="onLike(product.id)">Like</button></td>
+  </tr>
+</table>

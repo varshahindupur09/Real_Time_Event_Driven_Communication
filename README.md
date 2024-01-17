@@ -50,6 +50,17 @@ mysql> show tables;
 docker compose down -v
 docker compose build
 
+# Frontend:
+npm install -g @angular/cli@latest
+ng new admin-frontend
+cd admin-frontend
+ng generate component components/product-list
+ng generate component components/product-card
+ng add @angular/material
+npm install bootstrap
+ng generate service services/product  => Create a service to handle HTTP requests to your backend
+
+
 # RabbitMQ functioning:
 ![image](https://github.com/user-attachments/assets/47a1ad1c-8209-4c91-b714-8c218dfc9e4a)
 
