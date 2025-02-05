@@ -2,37 +2,37 @@
 Demonstration of a real time event driven communication system for 2 applications: main app and admin app. Admin app can post products and main app which is for users can like the product.
 
 # Start Using Project
-django-admin startproject admin
-cd admin
-python3 manage.py runserver
-python -m venv .venv
-source .venv/bin/activate
-conda deactivate
-pip install --upgrade pi
-pip install -r requirements.txt
-docker-compose up
-mysql -u adminuser -p -h 127.0.0.1 -P 33066
+django-admin startproject admin <br/>
+cd admin <br/>
+python3 manage.py runserver <br/>
+python -m venv .venv <br/>
+source .venv/bin/activate <br/>
+conda deactivate <br/>
+pip install --upgrade pip <br/>
+pip install -r requirements.txt <br/>
+docker-compose up <br/>
+mysql -u adminuser -p -h 127.0.0.1 -P 33066 <br/>
 
 docker-compose exec backend sh
 
 
 # main app usage
-cd main
-python3.12 -m venv .venv
-source .venv/bin/activate
-conda deactivate
-pip install --upgrade pip
-pip install -r requirements.txt
-docker compose build backend
-docker compose down
-docker compose up
-docker compose up --build -d
-docker compose exec db /bin/bash
-echo $MYSQL_USER
+cd main <br/>
+python3.12 -m venv .venv <br/>
+source .venv/bin/activate <br/>
+conda deactivate <br/>
+pip install --upgrade pip <br/>
+pip install -r requirements.txt <br/>
+docker compose build backend <br/>
+docker compose down <br/>
+docker compose up <br/>
+docker compose up --build -d <br/>
+docker compose exec db /bin/bash <br/>
+echo $MYSQL_USER <br/>
 
-docker compose exec backend sh => python manager.py db init => python manager.py db migrate => python manager.py db upgrade
+docker compose exec backend sh => python manager.py db init => python manager.py db migrate => python manager.py db upgrade <br/>
 
-docker-compose exec backend sh => export FLASK_APP=main.py => flask db init => flask db migrate -m "Initial migration" => flask db upgrade
+docker-compose exec backend sh => export FLASK_APP=main.py => flask db init => flask db migrate -m "Initial migration" => flask db upgrade <br/>
 
 docker compose exec db mysql -u root -p
 use main;
