@@ -51,14 +51,14 @@ docker compose down -v
 docker compose build
 
 # Frontend:
-npm install -g @angular/cli@latest
-ng new admin-frontend
-cd admin-frontend
-ng generate component components/product-list
-ng generate component components/product-card
-ng add @angular/material
-npm install bootstrap
-ng generate service services/product  => Create a service to handle HTTP requests to your backend
+npm install -g @angular/cli@latest <br/>
+ng new admin-frontend <br/>
+cd admin-frontend <br/>
+ng generate component components/product-list <br/>
+ng generate component components/product-card <br/>
+ng add @angular/material <br/>
+npm install bootstrap <br/>
+ng generate service services/product  => Create a service to handle HTTP requests to your backend <br/>
 
 
 # RabbitMQ functioning:
